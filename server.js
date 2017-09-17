@@ -4,10 +4,11 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
- var articalone = {
-    title:'artical-one kalai',
-    heading:'artical-one',
-    date:' sep 17,2017',
+  
+   var articalone = {
+    title: 'artical-one kalai',
+    heading: 'artical.one' ,
+    date: 'sep 17,2017',
     content:`
              <p>
                 this my first artical one . this my first artical one this my first artical one this my first artical one this my first artical one this my first artical one this my first artical one this my first artical one.
@@ -16,33 +17,36 @@ app.use(morgan('combined'));
             <p>
                 this my first artical one . this my first artical one this my first artical one this my first artical one this my first
                 artical one this my first artical one this my first artical one this my first artical one.
-            </p>'
+            </p>`
 };
-funtion createtemplate(data){
-    var title:data.title;
-    var date:data.date;
-    var heading:data.heading;
-    var content:data.content;
-}
-var template='
- <html>
-   <head>
-         <title>${title}</title>
-         <meta name="viewport" content="width=device-width,initial-scale=1"/>
-         <link href="/ui/style.css" rel="stylesheet" />  
-    </head>
+ 
+ function createtemplate(data){
+     var title = data.title;
+     var date = data.date;
+     var heading = data.heading;
+     var content = data.content;
+     
+     var template=`
+    <html>
+           <head>
+            <title>${title}</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+            <link href="/ui/style.css" rel="stylesheet" />  
+            </head>
       <body>
             <div class="container">
-        <div>
+         <div>
             <a href="/">home</a>
         </div>
         <hr/>
-      <h1>${heading}</h1>
+      <h1>
+         ${heading}
+      </h1>
         <div>
-            ${date}
+          ${date}
         </div>
         <div>
-         ${content}
+          ${content}
         </div>
         </div>
       </body>
