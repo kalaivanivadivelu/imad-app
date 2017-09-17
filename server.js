@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
   
    var articals = {
-    artical-one : {
+   ' artical-one' : {
        title: 'artical-one kalai',
        heading: 'artical.one' ,
        date: 'sep 17,2017',
@@ -15,7 +15,7 @@ app.use(morgan('combined'));
                 this my first artical one 
                 </p>`
 },
-    artical-two : {
+    'artical-two' : {
      title: 'artical-two  kalai',
     heading: 'artical.two' ,
     date: 'sep 10,2017',
@@ -24,7 +24,7 @@ app.use(morgan('combined'));
                 this my second artical two.
                 </p>`
 },
-    artical-three : {
+    'artical-three' : {
      title: 'artical-three  kalai',
     heading: 'artical.three' ,
     date: 'sep 01,2017',
@@ -32,7 +32,7 @@ app.use(morgan('combined'));
              <p>
                 this my third artical three.
                 </p>`
-},
+}
 };
  
  function createtemplate(data){
@@ -76,14 +76,13 @@ app.get('/', function (req, res) {
 app.get('/:articalName',function(req,res){
     //articalName==artical-one
     //articals[articalname]== {} content object for artical-one
-    var articalName=req params.articalName;
+    var articalName=req.params.articalName;
      res.send(createTemplate(articals[articalname]));
 });
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-t
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
