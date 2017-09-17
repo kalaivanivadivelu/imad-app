@@ -77,7 +77,7 @@ app.get('/:articalName',function(req,res){
     //articalName==artical-one
     //articals[articalname]== {} content object for artical-one
     var articalName=req.params.articalName;
-     res.send(createTemplate(articals[articalname]));
+     res.send(createTemplate(articals[articalName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
