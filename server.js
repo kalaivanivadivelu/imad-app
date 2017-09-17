@@ -16,7 +16,7 @@ app.use(morgan('combined'));
                 </p>`
 },
     'artical-two' : {
-     title: 'artical-two  kalai',
+    title: 'artical-two  kalai',
     heading: 'artical.two' ,
     date: 'sep 10,2017',
     content:`
@@ -25,7 +25,7 @@ app.use(morgan('combined'));
                 </p>`
 },
     'artical-three' : {
-     title: 'artical-three  kalai',
+    title: 'artical-three  kalai',
     heading: 'artical.three' ,
     date: 'sep 01,2017',
     content:`
@@ -44,7 +44,9 @@ app.use(morgan('combined'));
      var htmlTemplate =`
     <html>
            <head>
-            <title>${title}</title>
+            <title>
+            ${title}
+            </title>
             <meta name="viewport" content="width=device-width,initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />  
             </head>
