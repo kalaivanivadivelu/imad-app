@@ -19,14 +19,33 @@ img.onclick = function () {
  
  //counter code
 var button = document.getElementById("counter");
-var counter = 0;
+/*var counter = 0;*/
 button.onclick = function(){
-    //make a request to the counter endpoint
+    //creat the request object
+    var request = new xmlhttpRequest();
     
     //capture the response and store it is a variable
+    request.onreadystatecharge = function(){
+        if (request.readystate --- xmlhttpRequest.DONE){
+            //Takes some action
+            if(request.state === 200) {
+           var counter = request.responeseText;
+            span.innerHTML = counter.toString();
+          }
+        }
+        //NOT DONE YET
+    };
+    //make the request
+    request.open('GET','HTTP://http://kalaivanivadivelu12.imad.hasura-app.io/counter',true);
+    request.send(null);
     
+};
+
+    
+   
+   
     //render the variable in the correct span
-    counter = counter + 1;
+  /* counter = counter + 1;
     var span = document.getElementById("count");
     span.innerHTML = counter.toString();
-    };
+    };*/
