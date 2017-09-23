@@ -16,7 +16,7 @@ img.onclick = function () {
       var interval = setInterval(moveRight, 50);
  }; */
  //counter code
-var button = document.getElementById('counter');
+var button = document.getElementById("counter");
 var counter = 0;
 button.onClick = function(){
     //make a request to the counter endpoint
