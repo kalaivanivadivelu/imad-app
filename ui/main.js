@@ -51,7 +51,7 @@ button.onclick = function () {
     //submite name
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
-    var submite = document.getElementById('submit_btn');
+    var submite = document.getElementById("submit_btn");
     //make a request to a server and send the name 
     
     //capture a list of name render it as a lits
@@ -61,6 +61,6 @@ button.onclick = function () {
         list += '<li>' + name[i] + '<li>';
   }
   var ul = document.getElementById("namelist");
-     ul.innerHTML = list;
+  ul.innerHTML = list;
 };
   
