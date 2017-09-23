@@ -42,12 +42,25 @@ button.onclick = function () {
     request.send(null);
     
 };
-
-    
-   
-   
-    //render the variable in the correct span
+//render the variable in the correct span
   /* counter = counter + 1;
     var span = document.getElementById("count");
     span.innerHTML = counter.toString();
     };*/
+    
+    //submite name
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
+    var submite = document.getElementById('submit_btn');
+    //make a request to a server and send the name 
+    
+    //capture a list of name render it as a lits
+    var names = ['name one','name two','name three'];
+    var list = '';
+    for(var i=0;i< name.length;i++) {
+        list += '<li>' + name[i] + '<li>';
+  }
+  var ul = document.getElementById("namelist");
+     ul.innerHTML = list;
+};
+  
