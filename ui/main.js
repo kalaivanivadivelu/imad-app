@@ -57,7 +57,7 @@ button.onclick = function () {
     //capture a list of name render it as a lits
     var names = ['name one','name two','name three'];
     var list = '';
-    for(var i=0;i< name.length;i++) {
+    for(var i=0;i< names.length;i++) {
         list += '<li>' + name[i] + '<li>';
   }
   var ul = document.getElementById("namelist");
