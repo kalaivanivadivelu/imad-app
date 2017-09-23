@@ -15,6 +15,8 @@ function moveRight(){
 img.onclick = function () {
       var interval = setInterval(moveRight, 50);
  }; */
+ 
+ 
  //counter code
 var button = document.getElementById("counter");
 var counter = 0;
@@ -25,6 +27,6 @@ button.onClick = function(){
     
     //render the variable in the correct span
     counter = counter + 1;
-    var span = document.getElementById('count');
+    var span = document.getElementById("ount");
     span.innerHTML = counter.toString();
     };
