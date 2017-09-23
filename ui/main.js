@@ -52,6 +52,7 @@ button.onclick = function () {
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
     var submite = document.getElementById("submit_btn");
+    submite.onclicke = function() {
     //make a request to a server and send the name 
     
     //capture a list of name render it as a lits
