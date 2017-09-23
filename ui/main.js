@@ -38,7 +38,7 @@ button.onclick = function () {
         //NOT DONE YET
     };
     //make the request
-    request.open('GET','http://kalaivanivadivelu12.imad.hasura-app.io/',true);
+    request.open('GET','http://kalaivanivadivelu12.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
