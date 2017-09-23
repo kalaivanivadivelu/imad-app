@@ -20,23 +20,24 @@ img.onclick = function () {
  //counter code
 var button = document.getElementById("counter");
 /*var counter = 0;*/
-button.onclick = function(){
+button.onclick = function () {
     //creat the request object
-    var request = new xmlhttpRequest();
+    var request = new XMLHttpRequest();
     
     //capture the response and store it is a variable
     request.onreadystatecharge = function(){
-        if (request.readystate --- xmlhttpRequest.DONE){
+        if (request.readystate --- XMLHttpRequest.DONE){
             //Takes some action
             if(request.state === 200) {
            var counter = request.responeseText;
+             var span = document.getElementById("count");
             span.innerHTML = counter.toString();
           }
         }
         //NOT DONE YET
     };
     //make the request
-    request.open('GET','HTTP://http://kalaivanivadivelu12.imad.hasura-app.io/counter',true);
+    request.open('GET','http://kalaivanivadivelu12.imad.hasura-app.io/',true);
     request.send(null);
     
 };
