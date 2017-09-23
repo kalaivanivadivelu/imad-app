@@ -21,14 +21,15 @@ img.onclick = function () {
 var button = document.getElementById("counter");
 /*var counter = 0;*/
 button.onclick = function () {
+   
     //creat the request object
     var request = new XMLHttpRequest();
     
     //capture the response and store it is a variable
     request.onreadystatecharge = function(){
-        if (request.readystate --- XMLHttpRequest.DONE){
+        if (request.readystate === XMLHttpRequest.DONE){
             //Takes some action
-            if(request.state === 200) {
+            if(request.state --- 200) {
            var counter = request.responeseText;
              var span = document.getElementById("count");
             span.innerHTML = counter.toString();
